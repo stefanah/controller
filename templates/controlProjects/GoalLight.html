@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--<html>
+	<body>
+		<p><button type="button"><h1>Light and Siren</h1></button></p>
+		
+		<button type="button"><h1>Just Light</h1></button>
+		<br />
+		<br />
+	</body>
+</html>-->
+
+<html>
+    <head>
+        <title>Light Control Page</title>
+    </head>
+
+    <body>
+        <h1>Add a Category</h1>
+
+        <form id="goal_light_form" method="post" action="/controlProjects/GoalLight/">
+
+            {% csrf_token %}
+<!--           {% for hidden in form.hidden_fields %}
+               {{ hidden }} 
+            {% endfor %}
+-->
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text}}
+                {{ field }}
+            	<br />
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Push Command" />
+        </form>
+    </body>
+
+</html>
+
+<FORM>
+	<INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;">
+</FORM>

@@ -1,0 +1,11 @@
+I have a basic login system
+Users can create accounts
+Going to the rood directory should be enough to figure out how everything works
+Most of the site is blank
+
+Plan:
+Users click button on computer
+RPi reads data from raw data page
+
+Thinking about streaming http
+http://stackoverflow.com/questions/2922874/how-to-stream-an-httpresponse-with-django

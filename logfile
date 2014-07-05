@@ -1,0 +1,27 @@
+[28/May/2014 23:50:09] DEBUG [controlProjects.views:49] Hey there it works!!
+[28/May/2014 23:50:09] INFO [controlProjects.views:50] Hey there it works!!
+[28/May/2014 23:50:09] WARNING [controlProjects.views:51] Hey there it works!!
+[28/May/2014 23:50:09] ERROR [controlProjects.views:52] Hey there it works!!
+[28/May/2014 23:50:13] DEBUG [controlProjects.views:49] Hey there it works!!
+[28/May/2014 23:50:13] INFO [controlProjects.views:50] Hey there it works!!
+[28/May/2014 23:50:13] WARNING [controlProjects.views:51] Hey there it works!!
+[28/May/2014 23:50:13] ERROR [controlProjects.views:52] Hey there it works!!
+[02/Jul/2014 00:21:51] ERROR [django.request:224] Internal Server Error: /controlProjects/GoalLight/
+Traceback (most recent call last):
+  File "/Users/stefan/Documents/Projects/Goal_Light_Site/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/stefan/Documents/Projects/Goal_Light_Site/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/stefan/Documents/Aptana_3_Workspace/Goal_Light_Site/controlProjects/views.py", line 26, in goalLight
+    goal = GoalLight.objects.get(user = user)
+  File "/Users/stefan/Documents/Projects/Goal_Light_Site/venv/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/Users/stefan/Documents/Projects/Goal_Light_Site/venv/lib/python2.7/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+DoesNotExist: GoalLight matching query does not exist.
+[02/Jul/2014 00:22:25] WARNING [django.request:143] Not Found: /static/admin/css/base.css
+[02/Jul/2014 00:22:25] WARNING [django.request:143] Not Found: /static/admin/css/login.css
+[02/Jul/2014 00:22:29] WARNING [django.request:143] Not Found: /static/admin/css/base.css
+[02/Jul/2014 00:22:29] WARNING [django.request:143] Not Found: /static/admin/css/login.css
+[02/Jul/2014 00:22:47] WARNING [django.request:143] Not Found: /static/admin/css/base.css
+[02/Jul/2014 00:22:47] WARNING [django.request:143] Not Found: /static/admin/css/login.css
