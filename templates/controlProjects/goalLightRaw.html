@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Light Control Page</title>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet">
+    </head>
     <body>
-        <form id="goal_light_form" method="post" action="/controlProjects/GoalLight/">
+        <form class="form-signin" role="form" id="goal_light_form" method="post" action="/controlProjects/GoalLight/">
 
             {% csrf_token %}
             {% for field in form.visible_fields %}
@@ -12,7 +17,7 @@
             	<br />
             {% endfor %}
 
-            <input type="submit" name="submit" value="Push Command" />
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Push Command</button>
         </form>
     </body>
 

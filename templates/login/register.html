@@ -2,31 +2,34 @@
 <html>
     <head>
         <title>Rango</title>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Register with Rango</h1>
+        <div class="container">
+            <form class="form-signin" role="form" id="user_form" method="post" action="/login/register/"
+                    enctype="multipart/form-data">
+            <h2 class="form-signin-heading">Register with Rango</h2>
 
-        {% if registered %}
-        Rango says: <strong>thank you for registering!</strong>
-        <a href="/login">Return to the homepage.</a><br />
-        {% else %}
-        Rango says: <strong>register here!</strong><br />
+            {% if registered %}
+            <h5>Rango says: <strong>thank you for registering!</strong></h5><br>
+            <h5><a href="/login">Return to the homepage.</a></h5><br>
+            {% else %}
+            <h5>Rango says: <strong>register here!</strong></h5><br>
 
-        <form id="user_form" method="post" action="/login/register/"
-                enctype="multipart/form-data">
+                {% csrf_token %}
 
-            {% csrf_token %}
+                <!-- Display each form. The as_p method wraps each element in a paragraph
+                     (<p>) element. This ensures each element appears on a new line,
+                     making everything look neater. -->
+                {{ user_form.as_p }}
+                <!--{{ profile_form.as_p }} -->
 
-            <!-- Display each form. The as_p method wraps each element in a paragraph
-                 (<p>) element. This ensures each element appears on a new line,
-                 making everything look neater. -->
-            {{ user_form.as_p }}
-            <!--{{ profile_form.as_p }} -->
-
-            <!-- Provide a button to click to submit the form. -->
-            <input type="submit" name="submit" value="Register" />
-        </form>
-        {% endif %}
+                <!-- Provide a button to click to submit the form. -->
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Register</button>
+            {% endif %}
+            </form>
+        </div>
     </body>
 </html>
